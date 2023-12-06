@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "title": "Always in my mind",
+      "artist": "Pet Shot Boys",
+      "duration": "5:19",
+      "image": "src/assets/petshotboys.jfif"
+    },
+    {
+      "id": 2,
+      "title": "Every Breath You Take",
+      "artist": "The Police",
+      "duration": "3:49",
+      "image": "src/assets/thepolice.jfif"
+    }
+    
+  ] 
