@@ -1,12 +1,16 @@
 import styled from 'styled-components';
-import React from 'react';
+import React, { useState } from 'react';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
 import SongList from '../components/SongList';
 import SpotifySearch from '../components/SpotifySearch';
 
 
+
 const Spotify = () => {
+    const [currentSong, setCurrentSong] = useState({});
+
+
     return (
         <Container>
         <div className='spotifybody'>
@@ -14,14 +18,16 @@ const Spotify = () => {
         <div className='body'>
             <div className='bodycontent'>
 
-                <SpotifySearch/>
+                <SpotifySearch setCurrentSong={setCurrentSong}/>
                 
                 {/* <SongList/> */}
             </div>
         </div>
         </div>
         <div className='footer'>
-            <Footer/>
+            <Footer title={currentSong.title}
+            artist={currentSong.artist}
+            imagen={currentSong.imagen}/>
 
         </div>
         </Container>

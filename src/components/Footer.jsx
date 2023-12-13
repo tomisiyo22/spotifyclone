@@ -3,10 +3,12 @@ import styled from 'styled-components';
 import Playercontrols from './Playercontrols';
 import Cancionpararepro from './Cancionpararepro';
 
-const Footer = () => {
+const Footer = ({title, imagen, artist}) => {
     return (
         <Container>
-            <Cancionpararepro />
+            <Cancionpararepro title={title}
+            artist={artist}
+            imagen={imagen} />
             <Playercontrols />
             <VolumenContainer>
                 <h1>Volumen</h1>

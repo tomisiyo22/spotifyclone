@@ -5,6 +5,7 @@ import { CgPlayButtonO } from 'react-icons/cg';
 
 
 
+
 const StyledContainer = styled.div`
   text-align: center;
   padding: 20px;
@@ -76,7 +77,7 @@ const StyledPlayButton = styled.button`
   font-size: 12px;
 `;
 
-const App = () => {
+const App = ({setCurrentSong}) => {
   const [cancion, setCancion] = useState('');
   const [canciones, setCanciones] = useState([]);
 
@@ -111,6 +112,15 @@ const App = () => {
     }
   };
 
+  const playsong = (cancion)=> {
+     const songToSet = {
+      title: cancion.data.name,
+      artist: cancion.data.artists.items[0].profile.name,
+      imagen: cancion.data.albumOfTrack.coverArt.sources[0].url
+    }
+    setCurrentSong(songToSet) 
+  }
+
   return (
     <StyledContainer>
   
@@ -128,11 +138,14 @@ const App = () => {
           <StyledSong key={index}>
             <StyledSongImage src={cancion.data.albumOfTrack.coverArt.sources[0].url} alt='' />
             <StyledSongTitle>{cancion.data.name}</StyledSongTitle>
-            <a href={cancion.data.uri}>
-              <StyledPlayButton>
-                Play song <CgPlayButtonO className='botonPlay' />
+              <StyledPlayButton onClick={()=> playsong(cancion)}>
+                Play song <CgPlayButtonO className='botonPlay'/>
               </StyledPlayButton>
-            </a>
+             <a href={cancion.data.uri}> 
+               <StyledPlayButton>
+                Abrir en APP <CgPlayButtonO className='botonPlay' />
+              </StyledPlayButton> 
+            </a> 
           </StyledSong>
         ))}
       </StyledSongContainer>

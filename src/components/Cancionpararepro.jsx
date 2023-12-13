@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import imagen from "../assets/beatles.jpg"
 
-const Cancionpararepro = () => {
+const Cancionpararepro = ({title, imagen, artist}) => {
+
     return (
         <Container>
             <div className='responMenu'></div>
@@ -11,9 +12,9 @@ const Cancionpararepro = () => {
                     <img src={imagen}/>
                     </div>
                     <div className='info'>
-                        <h4 className='name'>Let it be
+                        <h4 className='name'>{title}
                         </h4>
-                        <h6 className='autor'>The Beatles</h6>
+                        <h6 className='autor'>{artist}</h6>
 
                     </div>
             </div>
