@@ -23,11 +23,11 @@ const StyledInput = styled.input`
   border: 1px solid #1db954;
   border-radius: 500px;
   color: #fff !important;
-  height: 24px; /* Ajusta la altura según tus preferencias */
-  padding: 6px 12px; /* Ajusta el padding según tus preferencias */
-  width: 40%; /* Ajusta el ancho según tus preferencias */
+  height: 24px; 
+  padding: 6px 12px; 
+  width: 40%; 
   margin-right: 10px;
-  margin-left: 10px; /* Ajusta el margen izquierdo según tus preferencias */
+  margin-left: 10px; 
 `;
 
 
@@ -102,12 +102,12 @@ const App = () => {
 
   const getSong = async (cancion) => {
     try {
-      let url = `https://spotify23.p.rapidapi.com/search/?q=${cancion}&type=multi&offset=0&limit=20&numberOfTopResults=5`;
-      let data = await fetch(url, options);
-      let res = await data.json();
+      const url = `https://spotify23.p.rapidapi.com/search/?q=${cancion}&type=multi&offset=0&limit=20&numberOfTopResults=5`;
+      const data = await fetch(url, options);
+      const res = await data.json();
       setCanciones(res.tracks.items);
     } catch (error) {
-      console.log(`ups... error: ${error}`);
+      console.log(`Error: ${error}`);
     }
   };
 
