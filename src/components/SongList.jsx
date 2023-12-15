@@ -27,5 +27,5 @@ export default SongList;
 
 const SongListContainer = styled.div`
   display: flex;
-  gap: 16px; /* Espaciado entre las tarjetas */
+  gap: 16px; 
 `;

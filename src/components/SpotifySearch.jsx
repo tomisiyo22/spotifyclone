@@ -1,81 +1,9 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import { CgPlayButtonO } from 'react-icons/cg';
+import { HiStopCircle } from "react-icons/hi2";
+import { BsPlayCircleFill } from "react-icons/bs";
 
-
-
-
-
-const StyledContainer = styled.div`
-  text-align: center;
-  padding: 20px;
-`;
-
-
-const StyledForm = styled.form`
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-`;
-
-const StyledInput = styled.input`
-  background-color: #121212;
-  border: 1px solid #1db954;
-  border-radius: 500px;
-  color: #fff !important;
-  height: 24px; 
-  padding: 6px 12px; 
-  width: 40%; 
-  margin-right: 10px;
-  margin-left: 10px; 
-`;
-
-
-const StyledSongContainer = styled.div`
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  max-height: 60vh;
-  overflow-y: auto;
-`;
-
-const StyledSong = styled.div`
-  width: 200px;
-  margin: 10px;
-  text-align: center;
-  background-color: #181818;
-  padding: 16px;
-  border-radius: 8px;
-  transition: transform 0.2s ease-in-out;
-
-  &:hover {
-    transform: scale(1.05);
-  }
-`;
-
-const StyledSongImage = styled.img`
-  width: 100%;
-  border-radius: 8px;
-`;
-
-const StyledSongTitle = styled.h2`
-  margin-top: 10px;
-  color: #fff;
-  font-size: 14px;
-`;
-
-const StyledPlayButton = styled.button`
-  margin-top: 5px;
-  padding: 6px;
-  cursor: pointer;
-  background-color: #1db954;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 12px;
-`;
 
 const App = ({setCurrentSong}) => {
   const [cancion, setCancion] = useState('');
@@ -142,8 +70,8 @@ const App = ({setCurrentSong}) => {
                 Play song <CgPlayButtonO className='botonPlay'/>
               </StyledPlayButton>
              <a href={cancion.data.uri}> 
-               <StyledPlayButton>
-                Abrir en APP <CgPlayButtonO className='botonPlay' />
+               <StyledPlayButton className='botonPlayTwo'>
+                Abrir en APP <CgPlayButtonO className='botonPlayTwo' />
               </StyledPlayButton> 
             </a> 
           </StyledSong>
@@ -154,3 +82,94 @@ const App = ({setCurrentSong}) => {
 };
 
 export default App;
+
+const StyledContainer = styled.div`
+  text-align: center;
+  padding: 20px;
+`;
+
+
+const StyledForm = styled.form`
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  
+`;
+
+const StyledInput = styled.input`
+  background-color: #121212;
+  border: 1px solid #1db954;
+  border-radius: 500px;
+  color: #fff !important;
+  height: 24px; 
+  padding: 6px 12px; 
+  width: 40%; 
+  margin-right: 10px;
+  margin-left: 10px; 
+`;
+
+
+const StyledSongContainer = styled.div`
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-height: 60vh;
+  overflow-y: auto;
+  /* Estilos de la barra de scroll similares a la del Sidebar */
+  scrollbar-width: thin;
+  scrollbar-color: #282828 #121212;
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #282828;
+  }
+`;
+
+const StyledSong = styled.div`
+  width: 200px;
+  margin: 10px;
+  text-align: center;
+  background-color: #181818;
+  padding: 16px;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+`;
+
+const StyledSongImage = styled.img`
+  width: 100%;
+  border-radius: 8px;
+`;
+
+const StyledSongTitle = styled.h2`
+  margin-top: 10px;
+  color: #fff;
+  font-size: 14px;
+`;
+
+const StyledPlayButton = styled.button`
+  margin-top: 5px;
+  padding: 6px;
+  cursor: pointer;
+  background-color: #1db954;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  font-family: 'Circular', 'Helvetica Neue', Arial, sans-serif; 
+  &.botonPlayTwo {
+    background-color:  #333; 
+    color: #fff; 
+
+    &:hover {
+      background-color: #111; 
+    }
+  }
+
+`;

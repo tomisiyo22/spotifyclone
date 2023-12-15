@@ -22,7 +22,7 @@ export default Footer;
 
 const Container = styled.div`
   color: white;
-  height: 150px; /* Ajusta la altura según tus necesidades */
+  height: 150px; 
   width: 100%;
   background-color: #181818;
   border-top: 1px solid #282828;
@@ -30,7 +30,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;
-  transition: background-color 0.3s ease; /* Efecto de transición al pasar el mouse */
+  transition: background-color 0.3s ease; 
   &:hover {
     background-color: #282828;
   }
@@ -39,6 +39,7 @@ const Container = styled.div`
 const VolumenContainer = styled.div`
   display: flex;
   align-items: center;
+  margin-right: 20px; 
   h1 {
     font-size: 14px;
     margin-right: 8px;
