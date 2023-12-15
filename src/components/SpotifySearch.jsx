@@ -117,7 +117,6 @@ const StyledSongContainer = styled.div`
   justify-content: space-around;
   max-height: 60vh;
   overflow-y: auto;
-  /* Estilos de la barra de scroll similares a la del Sidebar */
   scrollbar-width: thin;
   scrollbar-color: #282828 #121212;
   &::-webkit-scrollbar {
