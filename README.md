@@ -11,6 +11,32 @@ Este proyecto es un clon simplificado de la interfaz de usuario de Spotify, desa
 - Reproduce fragmentos de canciones
 - Muestra una simple lista harcodeada de algunas canciones en playlist.
 
+## Levantar el Proyecto
+
+1. Clona este repositorio:
+
+```bash
+git clone https://github.com/tu-usuario/spotify-clone.git
+```
+
+2. Navega al directorio del proyecto:
+
+```bash
+cd spotifyclone
+```
+
+3. Instala las dependencias:
+
+```bash
+npm install
+```
+
+4. Inicia la aplicación:
+
+```bash
+npm run dev
+```
+
 ### Contacto
 
 Si tenés alguna pregunta, sugerencia o simplemente querés ponerte en contacto, no dudes en hacerlo. Podés encontrarme a través de:
